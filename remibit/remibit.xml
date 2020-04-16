@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="3.4.2" type="plugin" group="vmpayment" method="upgrade">
+  <name>RemiBit Payment Method</name>
+  <creationDate>July 07 2019</creationDate>
+  <author>RemiBit Team</author>
+  <authorUrl>https://virtuemart.net</authorUrl>
+  <copyright>Copyright (C) 2019 RemiBit. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>3.4.2</version>
+  <description>
+    <![CDATA[<a href="https://app.remibit.com" target="_blank">RemiBit</a> is a payment gateway for cryptocurrencies. ]]>
+  </description>
+
+  <files>
+    <filename plugin="remibit">remibit.php</filename>
+    <folder>language</folder>
+    <folder>remibit</folder>
+  </files>
+  <vmconfig>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/plugins/vmpayment/remibit/remibit/fields">
+        <field type="spacer" default="VMPAYMENT_REMIBITW_PAYMENT_TITLE" level="level1"/>
+        <field type="spacer" default="" level="level1"/>
+        <field type="vmtitle" default="VMPAYMENT_REMIBIT_PARAMS" level="level1"/>
+        <field type="text" name="login_id" size="100" label="VMPAYMENT_REMIBIT_LOGIN_ID"
+             default=""/>
+        <field type="text" name="transaction_key" size="100" label="VMPAYMENT_REMIBIT_TRANSACTION_KEY"
+               default=""/>
+        <field type="text" name="signature_key" size="150" label="VMPAYMENT_REMIBIT_SIGNATURE_KEY"
+               default=""/>
+        <field type="text" name="md5_hash" size="100" label="VMPAYMENT_REMIBIT_MD5_HASH"
+               default=""/>
+        <field type="text" name="endpoint" size="100" label="VMPAYMENT_REMIBIT_TRANSACTION_KEY"
+               default="https://app.remibit.com/pay"/>
+
+         <field type="vmtitle" default="VMPAYMENT_REMIBIT_PAYMENT_PAGE" level="level1"/>
+         <field name="status_pending" type="vmorderstate" scope="com_virtuemart" default="U"
+               label="VMPAYMENT_REMIBIT_STATUS_PENDING" description="VMPAYMENT_REMIBIT_STATUS_PENDING_DESC"/>
+         <field name="status_received" type="vmorderstate" scope="com_virtuemart" default="C"
+               label="VMPAYMENT_REMIBIT_STATUS_RECEIVED" description="VMPAYMENT_REMIBIT_STATUS_RECEIVED_DESC"/>
+         <field name="status_loss" type="vmorderstate" scope="com_virtuemart" default="X"
+               label="VMPAYMENT_REMIBIT_STATUS_LOSS" description="VMPAYMENT_REMIBIT_STATUS_LOSS_DESC"/>
+
+         <field type="vmtitle" default="VMPAYMENT_REMIBIT_RESTRICTIONS" level="level1"/>
+         <field name="countries" type="vmcountries" scope="com_virtuemart" default="" multiple="true" label="VMPAYMENT_REMIBIT_COUNTRIES"
+               description="VMPAYMENT_REMIBIT_COUNTRIES_DESC"/>
+         <field name="min_amount" type="text" label="VMPAYMENT_REMIBIT_MIN_AMOUNT"
+               description="VMPAYMENT_REMIBIT_MIN_AMOUNT_DESC"/>
+         <field name="max_amount" type="text" label="VMPAYMENT_REMIBIT_MAX_AMOUNT"
+               description="VMPAYMENT_REMIBIT_MAX_AMOUNT_DESC"/>
+         <field name="tax_id" type="vmtaxes" scope="com_virtuemart" label="VMPAYMENT_REMIBIT_TAX"
+               description="VMPAYMENT_REMIBIT_TAX_DESC"/>
+      </fieldset>
+    </fields>
+  </vmconfig>
+</extension>
