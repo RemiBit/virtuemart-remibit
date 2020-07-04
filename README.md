@@ -6,7 +6,7 @@ INSTALLATION AND CONFIGURATION
 ## Integration Requirements
 
 * A RemiBit merchant account.
-* VirtueMart 3, tested up to 3.6.10
+* VirtueMart 3, tested up to 3.8.4
 
 ## Extension Download
 
@@ -41,5 +41,5 @@ INSTALLATION AND CONFIGURATION
 * Login ID
 * Transaction Key
 * Signature Key
-* MD5 Hash
+* MD5 Hash Value
 
