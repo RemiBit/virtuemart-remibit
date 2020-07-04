@@ -30,7 +30,7 @@
                default=""/>
         <field type="text" name="md5_hash" size="100" label="VMPAYMENT_REMIBIT_MD5_HASH"
                default=""/>
-        <field type="text" name="endpoint" size="100" label="VMPAYMENT_REMIBIT_TRANSACTION_KEY"
+        <field type="text" name="endpoint" size="100" label="VMPAYMENT_REMIBIT_ENDPOINT"
                default="https://app.remibit.com/pay"/>
 
          <field type="vmtitle" default="VMPAYMENT_REMIBIT_PAYMENT_PAGE" level="level1"/>
