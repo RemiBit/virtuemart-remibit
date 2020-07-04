@@ -10,7 +10,7 @@ INSTALLATION AND CONFIGURATION
 
 ## Extension Download
 
-* Get the extension from virtuemart-remibit github Releases repository https://github.com/RemiBit/virtuemart-remibit/releases
+* Get the extension from virtuemart-remibit github Releases repository https://github.com/RemiBit/virtuemart-remibit/releases/latest
 * Right click `virtuemart-remibit.zip` and save it on your computer
 
 
