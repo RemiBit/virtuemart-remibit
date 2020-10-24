@@ -193,7 +193,7 @@ class plgVmPaymentRemibit extends vmPSPlugin {
             'x_phone' => $order['details']['BT']->phone_1,
             'x_email' => $order['details']['BT']->email,
             'x_tax' => (float)$order['details']['BT']->order_tax,
-            'x_cancel_url' => JROUTE::_('index.php?option=com_virtuemart&view=cart&Itemid=' . vRequest::getInt('Itemid').'&lang='.vRequest::getCmd('lang','')),
+            'x_cancel_url' => JURI::root() . 'index.php?option=com_virtuemart&view=cart&Itemid=' . vRequest::getInt('Itemid').'&lang='.vRequest::getCmd('lang',''),
             'x_cancel_url_text' => 'Cancel Payment',
             'x_test_request' => 'FALSE',
             'x_ship_to_first_name' => $order['details']['ST']->first_name,
